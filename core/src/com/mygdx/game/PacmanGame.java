@@ -9,6 +9,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
 public class PacmanGame extends Game {
+	public static final int HEIGHT = 600;
+    public static final int WIDTH = 800;
+    
 	public SpriteBatch batch;
 	
 	@Override
