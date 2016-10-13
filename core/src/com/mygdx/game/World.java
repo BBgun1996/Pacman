@@ -1,5 +1,12 @@
 package com.mygdx.game;
 
-public class World {
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
 
+public class World {
+	
+	private GameScreen gameScreen;
+	
+	
+	
 }
