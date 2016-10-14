@@ -10,6 +10,8 @@ public class WorldRenderer {
 	private SpriteBatch batch;
 	private Texture pacmanImg;
 	private MazeRenderer mazeRenderer;
+	
+	public static final int BLOCK_SIZE = 40;
     
 	public WorldRenderer(PacmanGame pacmanGame, World world) {
         this.pacmanGame = pacmanGame;
@@ -24,7 +26,8 @@ public class WorldRenderer {
 		SpriteBatch batch = pacmanGame.batch;
 		batch.begin();
 		Vector2 pos = world.getPacman().getPosition();
-		batch.draw(pacmanImg, pos.x, pos.y);
+		batch.draw(pacmanImg, pos.x - BLOCK_SIZE/2, PacmanGame.HEIGHT - pos.y - BLOCK_SIZE/2);
+		//batch.draw(pacmanImg, pos.x, pos.y);
 		batch.end();
     }
 }
