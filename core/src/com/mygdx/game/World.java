@@ -7,11 +7,14 @@ public class World {
 	private Pacman pacman;
     private PacmanGame pacmanGame;
     private Maze maze;
+    
+    private int score;
  
     World(PacmanGame pacmanGame) {
     	maze = new Maze();
-        pacman = new Pacman(60,60,maze);
+    	pacman = new Pacman(60,60,this);
         this.pacmanGame = pacmanGame;
+        score = 0;
     }
  
     Pacman getPacman() {
@@ -26,4 +29,11 @@ public class World {
         pacman.update();
     }
 	
+    public int getScore() {
+        return score;
+    }
+    
+    public void increaseScore() {
+        score += 1;
+    }
 }
